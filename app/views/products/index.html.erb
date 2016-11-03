@@ -1,0 +1,24 @@
+<h1>
+  Tailored just for you.
+</h1>
+<p>
+  Help us save puppies
+</p>
+
+<br>
+<br>
+
+<ul id="p-list">
+<% @products.each do |product| %>
+<li>
+  <div class="card">
+    <img src=<%=product.image%> alt="Avatar" style="width:100%">
+      <h4><b><%= link_to product.name,product %></b></h4> 
+      <p><%= product.kind %></p> 
+  </div>
+</li>
+<br/>
+<br/>
+<br/>
+<% end %>
+</ul>

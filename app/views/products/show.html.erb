@@ -1,0 +1,20 @@
+<h1> Imagine holding <%= @product.name %> </h1>
+<br/>
+<br/>
+<%= image_tag(@product.image, class: "img") %>
+<br/>
+<br/>
+<p id="show-p"> <%= @product.describe %> <p/>
+<p id="show-p"> <%= @product.age %> <p/>
+<p id="show-p"> <%= @product.size %> <p/>
+<p id="show-p"> <%= @product.contact %><p/>
+<p id="show-p"> <%= @product.zipcode %>, <%= @product.city %><p/>
+<br/>
+<h1>Let us know when <%= @product.name %> finds a new home!</h1>
+<p> Contact@alter.fuckoff </p>
+<br/>
+<br/>
+<%= link_to "Edit", edit_product_path, id: "welcomebtn", class: "btn btn-primary" %>
+<br/>
+<%= link_to "Delete", product_path(@product), data: {:confirm => 'Are you sure?'}, :method => :delete, id: "welcomebtn", class: "btn btn-primary"%>
+<br/>

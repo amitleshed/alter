@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>alter.</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul id="topnav">
+  <li><%=link_to image_tag("dog.png", class:"icon"), root_path %><li/>
+  <li><%=link_to "New Ad", new_product_path%></li>
+  <li style="float:right"><%= link_to "Contact", contact_path, class:"contact"%></li>
+  <li style="float:right"><%= link_to "About", about_path, class:"about"%></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

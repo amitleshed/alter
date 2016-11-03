@@ -1,0 +1,23 @@
+<%= form_for @product, html: {class: 'form'} do |field| %>
+<%= field.text_field :name, placeholder: "Name" , class: "form-control", required: true, pattern:".{3,10}", title: "3-10"%>
+<br/>
+<%= field.text_field :kind, placeholder: "Kind", class: "form-control", required: true, pattern:".{3,20}", title: "3-20"%>
+<br/>
+<%= field.text_area :describe, placeholder: "Description", class: "form-control", rows:"4", id: "describe", required: true, pattern:".{10,60}", title: "10-60 characters" %>
+<br/>
+<%= field.text_field :contact, placeholder: "Phone Number", class: "form-control", required: true %>
+<br/>
+<%= field.text_field :zipcode, placeholder: "Zipcode", class: "form-control", required: true %>
+<br/>
+<%= field.text_field :city, placeholder: "City", class: "form-control", required: true %>
+<br/>
+<%= field.text_field :image, placeholder: "Image URL", class: "form-control", required: true %>
+<br/>
+<%= field.select :age, options_for_select([ "Puppy", "Adult","Senior" ]), class: "my-select", required:true %>
+<br/>
+<br/>
+<%= field.select :size, options_for_select([ "Small", "Medium","Big" ]), class: "selectpicker", required:true %>
+<br/>
+<br/>
+<%= field.submit "Apply", class: "btn btn-primary", id: "submit-btn" %>
+<% end %>

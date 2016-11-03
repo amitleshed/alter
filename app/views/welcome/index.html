@@ -1,0 +1,28 @@
+<br/>
+<%= image_tag("logo.png", class:"logo")%>
+<br/>
+<p>Not a brand, Not for sale.</p>
+<br/>
+<br/>
+<%= form_tag(root_path, :method => "get", class:"form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search By Zipcode", class:"form-control", :required => true%>
+<%= submit_tag "Search", :name => nil, id: "submit-btn", class:"btn btn-primary"%>
+<% end %>
+<br/>
+<br/>
+<br/>
+<br/>
+<ul id="p-list">
+<% @products.each do |product| %>
+<li>
+  <div class="card">
+    <img src=<%=product.image%> alt="Avatar" style="width:100%">
+      <h4><b><%= link_to product.name,product%>, <%= product.kind %>, <%= product.age %></b></h4> 
+      <p><%= product.zipcode %>, <%= product.city %></p> 
+  </div>
+</li>
+<br/>
+<br/>
+<br/>
+<% end %>
+</ul>

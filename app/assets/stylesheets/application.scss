@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+  margin-top: 5em;
+}
+ul#topnav{
+    transition: 0.2s;
+    opacity: 0.8;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e3dede;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    li {
+       float: left;
+    }
+
+    li a {
+        transition: 0.3s;
+        display: block;
+        color: grey;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        transition: 0.1s;
+        background-color: #008c9e;
+        color: white;
+    }
+
+    .about {
+        transition: 0.3s;
+        background-color: #a3a1a1;
+        color: white;
+        border-right: none;
+    }
+    &:hover { 
+      transition: 0.2s;
+      opacity: 1;
+    }
+            .contact {
+        transition: 0.3s;
+        background-color: grey;
+        color: white;
+        border-right: none;
+      }
+}
+#welcomebtn{
+  width: 15% !important;
+  background-color: #a3a1a1;
+  border: none;
+  transition: 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    &:hover { 
+    -webkit-transition: 0.2s; 
+    transition: 0.2s;
+    background-color: #008c9e;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+     border: none;
+  }
+}
+
+.icon{
+  opacity: 0.8;
+  display: block;
+  height: 1.4em;
+  width: 1.4em;
+}
+.my-select{
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+     margin: 50px;
+  border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://www.stackoverflow.com/favicon.ico) 96% / 15% no-repeat #eee;
+}
