@@ -7,6 +7,10 @@ class Product < ActiveRecord::Base
   def Product.search(parameter) 
   where("products.zipcode LIKE ? OR products.city LIKE ?", "%#{parameter}%", "%#{parameter}%")
   end
+
+  def dumbass_method
+    puts "fuck you"
+  end
 end
 
 
